@@ -1,0 +1,23 @@
+uuid: 5cac8569-30ba-4dd9-aff0-73ab846c43c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.custom_activity
+    - field.storage.feeds_feed.field_link
+  module:
+    - link
+id: feeds_feed.custom_activity.field_link
+field_name: field_link
+entity_type: feeds_feed
+bundle: custom_activity
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

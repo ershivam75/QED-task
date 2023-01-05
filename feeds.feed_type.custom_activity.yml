@@ -1,0 +1,74 @@
+uuid: 96d789e1-3e80-4e2a-8954-75f09ceb2e61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - feeds_ex
+    - node
+id: custom_activity
+label: 'Custom Activity'
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: channel/item
+  use_tidy: false
+  display_errors: false
+  source_encoding:
+    - auto
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: article
+custom_sources:
+  title:
+    value: title
+    machine_name: title
+    type: blank
+    label: title
+  feed_title:
+    label: title
+    machine_name: feed_title
+    value: channel/item/title
+    raw: false
+    inner: false
+    type: xml
+  media_content:
+    value: 'media:content'
+    machine_name: media_content
+    type: blank
+    label: 'media:content'
+  '':
+    value: ''
+    machine_name: ''
+    type: blank
+    label: ''
+mappings:
+  -
+    target: title
+    map:
+      value: feed_title
+    unique: {  }
+    settings:
+      language: null

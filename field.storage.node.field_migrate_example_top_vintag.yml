@@ -1,0 +1,25 @@
+uuid: 5ef37b7d-52d3-4240-b6a1-eedc4dda8d16
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_example_advanced_setup
+  module:
+    - node
+_core:
+  default_config_hash: U5uDiuDIPGEKBjw7V-9qP0kNY50xM3Nt7EQWjzaCJhI
+id: node.field_migrate_example_top_vintag
+field_name: field_migrate_example_top_vintag
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

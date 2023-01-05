@@ -1,0 +1,10 @@
+uuid: f55acb76-b774-424a-8c4f-c0775b8e7aac
+langcode: en
+status: true
+dependencies: {  }
+id: custom_content
+label: 'Custom Content'
+description: ''
+source_type: 'Drupal 9'
+module: null
+shared_configuration: null

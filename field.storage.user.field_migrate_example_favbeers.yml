@@ -1,0 +1,25 @@
+uuid: 0b0b2a75-43b4-49bf-bfc6-0b3f87920a10
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_example_setup
+  module:
+    - node
+    - user
+_core:
+  default_config_hash: H2fncsRQ3ExBTopdajjAoI61I0gAVw3AIi3ASLzq5dE
+id: user.field_migrate_example_favbeers
+field_name: field_migrate_example_favbeers
+entity_type: user
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
